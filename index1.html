@@ -23,12 +23,7 @@
         let last
         let painting=false
         
-        
-        //检测设备是否支持触摸
-        let isTouchDevice='ontouchstart' in document.documentElement
-        if(isTouchDevice){
-            
-  window.onload=function(){
+        window.onload=function(){
   document.addEventListener('touchstart',function (event) { 
       if(event.touches.length>=2){ 
         event.preventDefault(); 
@@ -47,8 +42,9 @@
       } 
   }) 
 }
-
-            
+        //检测设备是否支持触摸
+        let isTouchDevice='ontouchstart' in document.documentElement
+        if(isTouchDevice){
             canvas.ontouchstart=(e)=>{
                 let x=e.touches[0].clientX
                 let y=e.touches[0].clientY
