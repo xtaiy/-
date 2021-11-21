@@ -27,6 +27,7 @@
         //检测设备是否支持触摸
         let isTouchDevice='ontouchstart' in document.documentElement
         if(isTouchDevice){
+            //canvas.style.overscrollBehavior='none'
             canvas.ontouchstart=(e)=>{
                 let x=e.touches[0].clientX
                 let y=e.touches[0].clientY
