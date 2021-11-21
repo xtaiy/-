@@ -27,13 +27,13 @@
         //检测设备是否支持触摸
         let isTouchDevice='ontouchstart' in document.documentElement
         if(isTouchDevice){
-            document.documentElement.addEventListener('touchstart', function (event) 
-            {
-                if (event.touches.length > 1) 
-                {
-                    event.preventDefault();
-                }
-            }, false);
+            window.onload=function(){
+  document.addEventListener('touchstart',function (event) { 
+      if(event.touches.length>=2){ 
+        event.preventDefault(); 
+      } 
+  }) 
+
             
             canvas.ontouchstart=(e)=>{
                 let x=e.touches[0].clientX
